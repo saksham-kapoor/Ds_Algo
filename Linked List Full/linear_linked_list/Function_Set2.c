@@ -123,12 +123,23 @@ void insert_in_linked_list(int pos, int val)
     }
 }
 
+void recursive_display_reverse_linked_list(struct Node *p)
+{
+    if (p)
+    {
+        recursive_display_reverse_linked_list(p->next);
+        printf("%d ", p->data);
+    }
+}
+
 int main()
 {
     int A[] = {1, 5, 2, -6, 14, 15};
     struct Node *result;
     create_linked_list(A, 6);
-    printf("Display Linked List = ");
+    printf("Reverse Display Linked List = \n");
+    recursive_display_reverse_linked_list(first);
+    printf("\nDisplay Linked List = \n");
     display_linked_list(first);
     // printf("\n");
     // printf("Linear Search Result = ");
@@ -150,9 +161,9 @@ int main()
     // printf("\n");
     // printf("Display Linked List = ");
     // display_linked_list(first);
-    printf("\n");
-    insert_in_linked_list(1, 305);
-    printf("Display Linked List = ");
-    display_linked_list(first);
+    // printf("\n");
+    // insert_in_linked_list(1, 305);
+    // printf("Display Linked List = ");
+    // display_linked_list(first);
     return 0;
 }
