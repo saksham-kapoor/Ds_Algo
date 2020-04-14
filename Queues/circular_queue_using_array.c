@@ -59,10 +59,10 @@ int main(int argc, char const *argv[])
     enqueue(&q, 20);
     enqueue(&q, 30);
     enqueue(&q, 30);
-    enqueue(&q, 40);
+    printf("Elemets are : ");
     Display(q);
-    printf("Element Removed : %d", dequeue(&q));
-    enqueue(&q, 40);
+    printf("Element Removed : %d\n", dequeue(&q));
+    printf("Elemets are : ");
     Display(q);
 
     return 0;

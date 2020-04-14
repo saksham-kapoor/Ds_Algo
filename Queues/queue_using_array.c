@@ -68,8 +68,10 @@ int main(int argc, char const *argv[])
     enqueue(&q, 5);
     enqueue(&q, 3);
     enqueue(&q, 3);
+    printf("Elements in queue : ");
     display(q);
-    printf("%d \n", dequeue(&q));
+    printf("Element Deleted : %d \n", dequeue(&q));
+    printf("Elements in queue : ");
     display(q);
     return 0;
 }

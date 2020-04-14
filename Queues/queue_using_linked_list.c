@@ -66,11 +66,13 @@ int main()
     enqueue(15);
     enqueue(25);
     enqueue(35);
+    printf("Elements in queue : ");
     Display();
     printf("Element deleted : %d \n", dequeue());
+    printf("Elements in queue : ");
     Display();
     printf("Element deleted : %d \n", dequeue());
     printf("Element deleted : %d \n", dequeue());
-    printf("Element deleted : %d \n", dequeue());
-    printf("Element deleted : %d \n", dequeue());
+    printf("Elements in queue : ");
+    Display();
 }
