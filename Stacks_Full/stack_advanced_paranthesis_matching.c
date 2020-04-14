@@ -35,16 +35,20 @@ int pop(struct Stack *st)
 
 int isBalanced(struct Stack *st, char *exp)
 {
-    int i;
+    int i, x;
     for (i = 0; exp[i]; i++)
     {
-        if (exp[i] == '(')
+        if (exp[i] == '(' || exp[i] == '{' || exp[i] == '[')
             push(st, exp[i]);
-        else if (exp[i] == ')')
+        else if (exp[i] == ')' || exp[i] == '}' || exp[i] == ']')
             if (st->top == -1)
                 return 0;
             else
-                pop(st);
+            {
+                x = pop(st);
+                if (!((int)x + 2 == (int)exp[i] || (int)x + 1 == (int)exp[i]))
+                    return 0;
+            }
     }
     if (st->top == -1)
         return 1;
