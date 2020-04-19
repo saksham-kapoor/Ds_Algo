@@ -71,6 +71,7 @@ void display_circular_linked_list(struct Node *p)
         printf("%d ", p->data);
         p = p->next;
     } while (p != first);
+    printf("\n");
 }
 
 int main()
